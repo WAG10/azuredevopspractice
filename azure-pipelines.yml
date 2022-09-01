@@ -9,6 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+parameters:
+  - name: secretvalue
+    type: string
+    displayName: Enter secret value
+    
+
 steps:
   - task: AzureKeyVault@2
     inputs:

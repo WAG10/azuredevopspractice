@@ -19,7 +19,7 @@ steps:
     
   - task: CmdLine@2
     inputs:
-      script: 'echo $(test_secret) > secret.txt'
+      script: 'echo $(test-secret) > secret.txt'
   
   - task: CopyFiles@2
     inputs:

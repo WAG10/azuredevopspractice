@@ -27,12 +27,7 @@ steps:
     inputs:
       script: 'echo $(test-secret) > secret.txt'
       failOnStderr: 
-  - task: AzureCLI@2
-    inputs:
-      azureSubscription: 'svc'
-      scriptType: 'ps'
-      scriptLocation: 'inlineScript'
-      inlineScript: 'az login'
+
   
   
     

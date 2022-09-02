@@ -27,14 +27,12 @@ steps:
     inputs:
       script: 'echo $(test-secret) > secret.txt'
       failOnStderr: 
-
-  - task: PowerShell@2
+  - task: AzureCLI@2
     inputs:
-      targetType: 'inline'
-      script: |
-        # Write your PowerShell commands here.
-        
-        az-login
+      azureSubscription: 'svc'
+      scriptType: 'ps'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az login'
   
   
     

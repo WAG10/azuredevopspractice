@@ -34,7 +34,7 @@ steps:
       script: |
         # Write your PowerShell commands here.
         
-        Write-Host $(parameters.name)
+        az-login
   
   
     
